@@ -9,7 +9,7 @@ import LuxuryConfetti from '../components/LuxuryConfetti';
 import CtaButton from '../components/CtaButton';
 import { ArrowRight, Star, Sparkles } from 'lucide-react';
 
-const Index = () => {
+const Index: React.FC = () => {
   // Set countdown to 7 days from now
   const endDate = new Date();
   endDate.setDate(endDate.getDate() + 7);
