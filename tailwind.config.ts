@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -21,6 +20,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'montserrat': ['Montserrat', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -110,13 +110,29 @@ export default {
 				'float': {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' }
+				},
+				'tilt': {
+					'0%, 100%': { transform: 'rotate(0deg)' },
+					'25%': { transform: 'rotate(1deg)' },
+					'75%': { transform: 'rotate(-1deg)' }
+				},
+				'shine': {
+					'0%': { transform: 'translateX(-100%) rotate(30deg)' },
+					'100%': { transform: 'translateX(100%) rotate(30deg)' }
+				},
+				'flip': {
+					'0%, 100%': { transform: 'rotateX(0)' },
+					'50%': { transform: 'rotateX(180deg)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'pulse-gold': 'pulse-gold 2s infinite',
-				'float': 'float 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite',
+				'tilt': 'tilt 5s ease-in-out infinite',
+				'shine': 'shine 4s linear infinite',
+				'flip': 'flip 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both'
 			},
 			backgroundImage: {
 				'gold-gradient': 'linear-gradient(to right, #E2B52C, #F5D679, #E2B52C)',
